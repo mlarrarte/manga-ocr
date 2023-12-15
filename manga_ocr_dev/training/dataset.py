@@ -80,6 +80,7 @@ class MangaDataset(Dataset):
                                           padding="max_length",
                                           max_length=self.max_target_length,
                                           truncation=True).input_ids
+        print(type(labels[0]))
         labels = np.array(labels)
         # important: make sure that PAD tokens are ignored by the loss function
         labels[labels == self.processor.tokenizer.pad_token_id] = -100
