@@ -2,8 +2,8 @@ from pathlib import Path
 
 ASSETS_PATH = Path(__file__).parent.parent / 'assets'
 
-FONTS_ROOT = Path('~/data/jp_fonts').expanduser()
-DATA_SYNTHETIC_ROOT = Path('~/data/manga/synthetic').expanduser()
-BACKGROUND_DIR = Path('~/data/manga/Manga109/background').expanduser()
-MANGA109_ROOT = Path('~/data/manga/').expanduser()
-TRAIN_ROOT = Path('~/data/manga/out').expanduser()
+FONTS_ROOT = Path('/content/drive/MyDrive/URTEA3/HP/PROIEKTUA/data/manga/jp_fonts').expanduser()
+DATA_SYNTHETIC_ROOT = Path('/content/drive/MyDrive/URTEA3/HP/PROIEKTUA/data/manga/synthetic').expanduser()
+BACKGROUND_DIR = Path('/content/drive/MyDrive/URTEA3/HP/PROIEKTUA/data/manga/Manga109/background').expanduser()
+MANGA109_ROOT = Path('/content/drive/MyDrive/URTEA3/HP/PROIEKTUA/data/manga').expanduser()
+TRAIN_ROOT = Path('/content/drive/MyDrive/URTEA3/HP/PROIEKTUA/data/manga/out').expanduser()
