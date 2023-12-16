@@ -23,4 +23,3 @@ fire
 budou
 albumentations>=1.1
 html2image
-html5lib>=1.1
