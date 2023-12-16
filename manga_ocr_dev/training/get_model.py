@@ -6,9 +6,9 @@ class TrOCRProcessorCustom(TrOCRProcessor):
     """The only point of this class is to bypass type checks of base class."""
 
     def __init__(self, feature_extractor, tokenizer):
-        self._feature_extractor = feature_extractor
+        self.feature_extractor = feature_extractor
         self.tokenizer = tokenizer
-        self.current_processor = self._feature_extractor
+        self.current_processor = self.feature_extractor
 
     # @property
     # def feature_extractor(self)->AutoFeatureExtractor:
