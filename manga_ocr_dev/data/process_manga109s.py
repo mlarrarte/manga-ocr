@@ -9,7 +9,7 @@ from manga_ocr_dev.env import MANGA109_ROOT
 
 
 def get_books():
-    root = MANGA109_ROOT / 'Manga109'
+    root = MANGA109_ROOT / 'Manga109_release'
     books = (root / 'books.txt').read_text().splitlines()
     books = pd.DataFrame({
         'book': books,
