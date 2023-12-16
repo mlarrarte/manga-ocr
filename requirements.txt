@@ -3,8 +3,8 @@ fugashi
 jaconv
 loguru
 numpy
-Pillow<10.1.0,>=8.3.2
+Pillow>=10.0.0
 pyperclip
 torch>=1.0
-transformers==4.20.1
+transformers>=4.25.0
 unidic_lite
