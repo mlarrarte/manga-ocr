@@ -39,6 +39,7 @@ class MangaDataset(Dataset):
 
         df = pd.read_csv(MANGA109_ROOT / 'data.csv')
         df = df[df.split == split].reset_index(drop=True)
+        print(df[0].crop_path)
         df['path'] = df.crop_path.apply(lambda x: str(MANGA109_ROOT / x))
         df = df[['path', 'text']]
         df['synthetic'] = False
