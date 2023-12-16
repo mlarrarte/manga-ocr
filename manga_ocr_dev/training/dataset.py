@@ -40,7 +40,6 @@ class MangaDataset(Dataset):
         df = pd.read_csv(MANGA109_ROOT / 'data.csv')
         df = df[df.split == split].reset_index(drop=True)
         df['path'] = df.crop_path.apply(lambda x: str(MANGA109_ROOT / x))
-        print(df['path'])
         df = df[['path', 'text']]
         df['synthetic'] = False
         data.append(df)
@@ -95,7 +94,8 @@ class MangaDataset(Dataset):
     @staticmethod
     def read_image(processor, path, transform=None):
         img = cv2.imread(str(path))
-        img = np.array(img)
+        print(type(img))
+
         if transform is None:
             transform = A.ToGray(always_apply=True)
 
