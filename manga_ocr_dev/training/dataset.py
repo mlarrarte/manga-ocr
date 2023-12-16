@@ -93,7 +93,7 @@ class MangaDataset(Dataset):
     @staticmethod
     def read_image(processor, path, transform=None):
         img = cv2.imread(str(path))
-
+        img = numpy.array(img)
         if transform is None:
             transform = A.ToGray(always_apply=True)
 
