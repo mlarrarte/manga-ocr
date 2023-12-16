@@ -10,13 +10,13 @@ class TrOCRProcessorCustom(TrOCRProcessor):
         self.tokenizer = tokenizer
         self.current_processor = self.feature_extractor
 
-    # @property
-    # def feature_extractor(self)->AutoFeatureExtractor:
-    #     return self._feature_extractor
+    @property
+    def feature_extractor(self)->AutoFeatureExtractor:
+        return self._feature_extractor
 
-    # @feature_extractor.setter
-    # def feature_extractor(self, newVal:AutoFeatureExtractor):
-    #     self._feature_extractor = newVal
+    @feature_extractor.setter
+    def feature_extractor(self, newVal:AutoFeatureExtractor):
+        self._feature_extractor = newVal
 
 
 def get_processor(encoder_name, decoder_name):
