@@ -1,7 +1,7 @@
 datasets
 jiwer
 torchinfo
-transformers==4.20.1
+transformers>=4.12.5
 unidic-lite
 ipadic
 mecab-python3
