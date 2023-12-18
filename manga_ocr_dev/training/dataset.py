@@ -10,7 +10,7 @@ from manga_ocr_dev.env import MANGA109_ROOT, DATA_SYNTHETIC_ROOT
 
 
 class MangaDataset(Dataset):
-    def __init__(self, processor, split, max_target_length, limit_size=None, augment=False, skip_packages=None):
+    def __init__(self, processor, split, max_target_length, limit_size=40000, augment=False, skip_packages=None):
         self.processor = processor
         self.max_target_length = max_target_length
 
