@@ -11,6 +11,7 @@ from manga_ocr_dev.env import MANGA109_ROOT
 def get_books():
     root = MANGA109_ROOT / 'Manga109s_released_2021_02_28'
     books = (root / 'books.txt').read_text().splitlines()
+    books = books[0:50]
     books = pd.DataFrame({
         'book': books,
         'annotations': [str(root / 'annotations' / f'{book}.xml') for book in books],
