@@ -75,7 +75,7 @@ class MangaDataset(Dataset):
             }[transform_variant]
         else:
             transform = None
-        print(len(str(sample.path)))
+
         pixel_values = self.read_image(self.processor, sample.path, transform)
         labels = self.processor.tokenizer(text,
                                           padding="max_length",
