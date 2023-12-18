@@ -75,6 +75,7 @@ class MangaDataset(Dataset):
         else:
             transform = None
         if cv2.imread(str(sample.path)) is None:
+            print(str(sample.path))
             return np.array(0)
         pixel_values = self.read_image(self.processor, sample.path, transform)
         labels = self.processor.tokenizer(text,
