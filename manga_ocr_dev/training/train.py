@@ -16,7 +16,7 @@ def run(
         num_decoder_layers=2,
         batch_size=64,
         num_epochs=8,
-        fp16=True,
+        fp16=False,
 ):
     wandb.login()
 
@@ -36,7 +36,7 @@ def run(
         per_device_eval_batch_size=batch_size,
         fp16=fp16,
         fp16_full_eval=fp16,
-        dataloader_num_workers=16,
+        dataloader_num_workers=2,
         output_dir=TRAIN_ROOT,
         logging_steps=10,
         save_steps=20000,
