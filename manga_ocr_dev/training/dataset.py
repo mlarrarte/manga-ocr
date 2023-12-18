@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
+from PIL import Image
 from torch.utils.data import Dataset
 
 from manga_ocr_dev.env import MANGA109_ROOT, DATA_SYNTHETIC_ROOT
@@ -94,6 +95,7 @@ class MangaDataset(Dataset):
     @staticmethod
     def read_image(processor, path, transform=None):
         img = cv2.imread(str(path))
+        print(img)
 
         if transform is None:
             transform = A.ToGray(always_apply=True)
