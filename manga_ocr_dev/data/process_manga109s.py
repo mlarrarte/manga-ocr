@@ -85,7 +85,7 @@ def export_crops():
     data.crop_path = data.crop_path.apply(lambda x: '/'.join(Path(x).parts[-2:]))
     data.to_csv(MANGA109_ROOT / 'data.csv', index=False)
 
-    for page_path, boxes in tqdm(data.groupby('page_path'), total=data.page_path.nunique()):
+    for page_path, boxes in tqdm(data[68723:].groupby('page_path'), total=data[68723:].page_path.nunique()):
         img = cv2.imread(str(MANGA109_ROOT / page_path))
 
         for box in boxes.itertuples():
